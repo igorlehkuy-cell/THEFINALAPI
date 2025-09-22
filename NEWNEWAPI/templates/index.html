@@ -16,21 +16,43 @@
 
     <div id="random-result"></div>
 
-    <hr>
-
-    <!-- Додавання чисел -->
+      <!-- Додавання чисел -->
     <input id="num1" type="number" placeholder="Число 1">
     <input id="num2" type="number" placeholder="Число 2">
     <button onclick="calculate()">Додати</button>
     <div id="calc-result"></div>
 
     <hr>
+    <!-- Віднімання чисел -->
+    <input id="num3" type="number" placeholder="Число 3">
+    <input id="num4" type="number" placeholder="Число 4">
+    <button onclick="calculate2()">Відняти</button>
+    <div id="calc-result2"></div>
 
-    <!-- Привітання -->
+    <h2>✖️ Множення</h2>
+    <input id="num5" type="number" placeholder="Число 1">
+    <input id="num6" type="number" placeholder="Число 2">
+    <button onclick="calculateMultiply()">Помножити</button>
+    <div id="calc-mul"></div>
+    <hr>
+
+    <h2>➗ Ділення</h2>
+    <input id="num7" type="number" placeholder="Число 1">
+    <input id="num8" type="number" placeholder="Число 2">
+    <button onclick="calculateDivide()">Поділити</button>
+    <div id="calc-div"></div>
+
+
+    <hr>
+
+
     <input id="name" type="text" placeholder="Ім'я">
     <input id="age" type="number" placeholder="Вік">
     <button onclick="getGreeting()">Привітання</button>
     <div id="greet-result"></div>
+
+
+
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
