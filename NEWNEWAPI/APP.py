@@ -93,6 +93,29 @@ def calculate():
     num2 = int(request.args.get('num2', 0))
     return jsonify({"num1": num1, "num2": num2, "result": num1 + num2})
 
+@app.route('/subtract')
+def subtract():
+    num3 = float(request.args.get('num3', 0))
+    num4 = float(request.args.get('num4', 0))
+    result = num3 - num4
+    return jsonify({"num3": num3, "num4": num4, "result": result})
+
+@app.route('/multiply')
+def multiply():
+    num5 = float(request.args.get('num5', 0))
+    num6 = float(request.args.get('num6', 0))
+    result = num5 * num6
+    return jsonify({"num5": num5, "num6": num6, "result": result})
+
+@app.route('/divide')
+def divide():
+    num7 = float(request.args.get('num7', 0))
+    num8 = float(request.args.get('num8', 1))  # щоб уникнути ділення на 0
+    if num8 == 0:
+        return jsonify({"error": "Ділення на нуль заборонене!"}), 400
+    result = num7 / num8
+    return jsonify({"num7": num7, "num8": num8, "result": result})
+
 @app.route('/greet')
 def greet():
     name = request.args.get('name', 'Гість')
